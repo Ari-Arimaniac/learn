@@ -6,10 +6,13 @@ if (!fileName) {
   require('./cli/_filelist').default()
 } else {
   const file = resolve('src/learnt', fileName)
-  console.log(file)
   try {
     require(file)
   } catch (e) {
-    require('./cli/_filelist').default(file)
+    try {
+      require(fileName)
+    } catch (e) {
+      require('./cli/_filelist').default(file)
+    }
   }
 }

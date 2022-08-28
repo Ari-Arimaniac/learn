@@ -15,7 +15,7 @@ const runCommand = async () => await detect()
 
 const r = 'src'
 export default function (path) {
-  console.log(r)
+  console.log(r, path)
   glob(`${path}/**/*.+(js|ts|tsx|jsx)`, async (_err, files) => {
     const prompts = files.map(file => ({ name: relative(path, file), value: relative(r, file) }))
     if (!prompts.length) { return console.log('no files / index.(ts|js) in this folder') }

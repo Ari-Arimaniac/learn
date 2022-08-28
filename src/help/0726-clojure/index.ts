@@ -1,4 +1,4 @@
-import { http } from '~/mock/ajax'
+// import { http } from '~/mock/ajax'
 
 /**
  * 用闭包的方式实现税的计算

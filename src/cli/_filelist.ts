@@ -13,7 +13,7 @@ const runCommand = async () => await detect()
     }
   })
 
-const r = 'src/learnt'
+const r = 'src'
 export default function (path) {
   console.log(r)
   glob(`${path}/**/*.+(js|ts|tsx|jsx)`, async (_err, files) => {

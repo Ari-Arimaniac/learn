@@ -3,7 +3,7 @@ const { resolve } = require('path')
 const fileName = process.argv.slice(2).join(' ').trim()
 
 if (!fileName) {
-  require('./cli/_filelist').default()
+  require('./cli/_fileList').default()
 } else {
   const file = resolve('src/learnt', fileName)
   try {
@@ -12,7 +12,7 @@ if (!fileName) {
     try {
       require(fileName)
     } catch (e) {
-      require('./cli/_filelist').default(file)
+      require('./cli/_fileList').default(file)
     }
   }
 }
